@@ -1,0 +1,42 @@
+#include<stdio.h>
+main()
+{
+	int i,n1,n2,p,y,j,x,m;
+	int a[100],b[100],c[100];
+	printf("Enter limit for first array=>");
+	scanf("%d",&n1);
+	printf("Enter limit for second array=>");
+	scanf("%d",&n2);
+	for(i=0;i<n1;i++)
+	{
+		printf("Enter number for first array=>");
+		scanf("%d",&a[i]);
+	}
+	for(i=0;i<n2;i++)
+	{
+		printf("Enter number for second array=>");
+		scanf("%d",&b[i]);
+	}
+	for(i=0;i<n1;i++)
+	{
+		x=a[i];
+		p=0;
+		for(j=0;j<n2;j++)
+		{
+			if(x==b[j])
+			{
+				p=1;
+			}
+		}
+		if(p==0)
+		{
+			c[m]=x;
+			m++;
+		}
+	}
+	
+	for(i=0;i<m;i++)
+	{
+		printf("\n%d",c[i]);
+	}
+}
