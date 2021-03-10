@@ -1,0 +1,25 @@
+#include<stdio.h>
+main()
+{
+	int n,x,rem,a,c;
+	printf("\n Enter no==>");
+	scanf("%d",&n);
+	c=n;
+	while(n>0)
+	{
+		rem=n%10;
+		x=(x*10)+rem;
+		n=n/10;
+	}
+	
+	printf("\nReverse no = %d and no = %d",x,n);
+	
+	if(x==c)
+	{
+		printf("%d IS PALINDROME",c);
+	}
+	else
+	{
+		printf("%d  IS NOT PALINDROME ",c);
+	}
+}
