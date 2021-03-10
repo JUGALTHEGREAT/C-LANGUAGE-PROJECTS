@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<time.h>
+#include<stdlib.h>
+main()
+{
+	int x,a,b,y,number,tries;
+	int t=0;
+	
+	srand(time(0));
+	x= rand()%100;
+	a=1;
+	b=100;
+	
+	while(y!=x)
+	{
+		printf("Guess a number :");
+		scanf("%d",&y);
+		
+		if(x==y)
+		{
+		printf("your guess is correct\n\n");
+		break;
+		}
+		else if(x>y)
+		{
+			printf("the new range is from%d to %d\n",y,b);
+			a=y;
+		}
+		else if(x<y)
+		{
+			printf("the new range is from%d to %d\n",a,y);
+			b=y;
+		}
+	   
+		t++;
+	}
+	printf("The number of turns=%d",t+1);
+}
