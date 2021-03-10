@@ -1,0 +1,141 @@
+#include<stdio.h>
+main()
+{
+	char a[9]={'_','_','_','_','_','_','_','_','_'};
+	int p1,p2,turn=0,pos;
+	printf("%c %c %c",a[0],a[1],a[2]);
+	printf("\n%c %c %c",a[3],a[4],a[5]);
+	printf("\n%c %c %c",a[6],a[7],a[8]);
+	while(turn < 10)
+	{
+		if (turn%2==0)
+		{
+			printf("\nEnter P1 position=>");
+			scanf("%d",&pos);
+			a[pos-1]='x';
+		}
+		else
+		{
+			printf("\nEnter P2 position=>");
+			scanf("%d",&pos);
+			a[pos-1]='0';
+		}
+		printf("%c %c %c",a[0],a[1],a[2]);
+	    printf("\n%c %c %c",a[3],a[4],a[5]);
+	    printf("\n%c %c %c",a[6],a[7],a[8]);
+	    if (a[0]==a[1] && a[0]==a[2])
+	    {
+	    	if(a[0]=='x')
+	    	{
+	    		printf("\nP1 wins");
+	    		turn=10;
+			}
+			else if (a[0]=='0')
+			{
+				printf("\nP2 wins");
+				turn=10;
+			}
+		}
+		else if (a[3]==a[4] && a[3]==a[5])
+		{
+			if(a[3]=='x')
+			{
+				printf("\nP1 wins");
+				turn=10;
+			}
+			else if (a[3]=='0')
+			{
+				printf("\nP2 wins");
+				turn=10;
+			}
+		}
+		else if (a[6]==a[7] && a[6]==a[8])
+		{
+			if(a[6]=='x')
+			{
+				printf("\nP1 wins");
+				turn=10;
+			}
+			else if (a[6]=='0')
+			{
+				printf("\nP2 wins");
+				turn=10;
+			}
+		}
+		else if (a[0]==a[3] && a[0]==a[6])
+		{
+			if(a[0]=='x')
+			{
+				printf("\nP1 wins");
+				turn=10;
+			}
+			else if (a[0]=='0')
+			{
+				printf("\nP2 wins");
+				turn=10;
+			}
+		}
+		else if (a[1]==a[4] && a[1]==a[7])
+		{
+			if(a[1]=='x')
+			{
+				printf("\nP1 wins");
+				turn=10;
+			}
+			else if (a[1]=='0')
+			{
+				printf("\nP2 wins");
+				turn=10;
+			}
+		}
+		else if (a[2]==a[8] && a[2]==a[5])
+		{
+			if(a[2]=='x')
+			{
+				printf("\nP1 wins");
+				turn=10;
+			}
+			else if (a[2]=='0')
+			{
+				printf("\nP2 wins");
+				turn=10;
+			}
+		}
+		else if (a[0]==a[4] && a[0]==a[8])
+		{
+			if(a[0]=='x')
+			{
+				printf("\nP1 wins");
+				turn=10;
+			}
+			else if (a[0]=='0')
+			{
+				printf("\nP2 wins");
+				turn=10;
+			}
+		}
+		else if (a[2]==a[4] && a[2]==a[6])
+		{
+			if(a[2]=='x')
+			{
+				printf("\nP1 wins");
+				turn=10;
+			}
+			else if (a[2]=='0')
+			{
+				printf("\nP2 wins");
+				turn=10;
+			}
+		
+		}
+		if(turn==9)
+		{
+			printf("\nThe game is tie");
+		
+		}
+	    turn++;
+	}
+		
+	
+	
+}
