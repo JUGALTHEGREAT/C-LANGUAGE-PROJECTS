@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<time.h>
+#include<stdlib.h>
+main()
+{
+	int x,y,number,tries;
+	int t=0;
+	
+	srand(time(0));
+	x= rand()%10;
+	
+	while(y!=x)
+	{
+		printf("Guess a number between 0-10:");
+		scanf("%d",&y);
+		
+		if(x==y)
+		{
+		printf("your guess is correct\n\n");
+		}
+		else
+		{
+			printf("THE NUMBER YOU GUESSED IS Incorrect\n");
+		}
+		
+	   	t++;
+	}
+	printf("The number of turns=%d",t);
+}
