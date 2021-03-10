@@ -1,0 +1,504 @@
+#include<stdio.h>
+#include<string.h>
+#include<conio.h>
+#define N 5
+#define M 5
+
+main()
+{
+	FILE*fp;
+	int a[N][M],rl,cp,ctcp,secp,aecp,cecp,ctecp,vvcp,lpwcp,seecp,tmcp,avgcp=0,p,ctp,sep,aep,cep,ctep,vvp,lpwp,seep,tmp,avgp=0,eeee,cteeee,seeeee,aeeeee,ceeeee,cteeeee,vveeee,lpweeee,seeeeee,tmeeee,avgeeee=0,la,ctla,sela,cela,aela,seela,tmla,avgla=0,maxcp=0,maxp=0,maxeeee=0,maxla,mincp=0,minp=0,mineeee=0,minla=0;
+	int i,x,j,s=0,c,ch,average,Total,choice,rollno,eng,tcp,tp,teeee,tla;
+	char sa[100],sb[100],sc[100],sd[100],se[200],name[20];
+	float add;
+	printf("\n                                         **STUDENT'S RESULT ANALYSIS**                           ");
+	printf("\n                                           _________________________                             ");
+	printf("\n\n\n NIRMA UNIVERSITY");
+	printf("\n ELECTRONICS AND COMMUNICATION ENGINEERING DEPARTMENT");
+	printf("\n FIRST SEMESTER");
+	
+	
+	printf("\n\n\n\n\n\n\n\n *Enter 1 to enter marks\n *Enter 2 to get details about software developers\n *Enter 3 for contact details\n *Enter 4 to exit ");
+	do
+	{
+	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n Enter choice==>");
+	scanf("%d",&choice);
+	if(choice==1)
+	{
+	
+	for(i=0;i<N;i++)
+	{
+		
+		{   
+	        printf("\n\n\n\n\n\n Enter roll number of candidate==>");
+	        scanf("%d",&rl);
+	        printf("\n Enter marks of candidate in CP in class test==>");
+	        scanf("%d",&ctcp);
+	        printf("\n Enter marks of candidate in CP in sessional exam==>");
+	        scanf("%d",&secp);
+	        printf("\n Enter marks of candidate in CP in assignment exam==>");
+	        scanf("%d",&aecp);
+	        cecp=(ctcp+secp+aecp);
+	        printf("\n Enter marks of candidate in CP in continous evaluation exam==>");
+	        scanf("%d",&ctecp);
+	        printf("\n Enter marks of candidate in CP in viva vace exam==>");
+	        scanf("%d",&vvcp);
+	        lpwcp=ctecp+vvcp;
+	        printf("\n Enter marks of candidate in CP in end semester exam==>");
+	        scanf("%d",&seecp);
+	        tmcp=0.4*cecp+0.2*lpwcp+0.4*seecp;
+	        
+            a[i][0]=rl;
+            a[i][1]=tmcp;
+			
+			
+			
+			printf("\n Enter marks of candidate in Physics in class test==>");
+	        scanf("%d",&ctp);
+	        printf("\n Enter marks of candidate in Physics in sessional exam==>");
+	        scanf("%d",&sep);
+	        printf("\n Enter marks of candidate in Physics in assignment exam==>");
+	        scanf("%d",&aep);
+	        cep=(ctp+sep+aep);
+	        printf("\n Enter marks of candidate in Physics in continous evaluation exam==>");
+	        scanf("%d",&ctep);
+	        printf("\n Enter marks of candidate in Physics in viva vace exam==>");
+	        scanf("%d",&vvp);
+	        lpwp=ctep+vvp;
+	        printf("\n Enter marks of candidate in Physics in end semester exam==>");
+	        scanf("%d",&seep);
+	        tmp=0.4*cep+0.2*lpwp+0.4*seep;
+	        
+        
+            a[i][2]=tmp;
+            
+        
+	        printf("\n Enter marks of candidate in EEEE in class test==>");
+	        scanf("%d",&cteeee);
+	        printf("\n Enter marks of candidate in EEEE in sessional exam==>");
+	        scanf("%d",&seeeee);
+	        printf("\n Enter marks of candidate in EEEE in assignment exam==>");
+	        scanf("%d",&aeeeee);
+	        ceeeee=(cteeee+seeeee+aeeeee);
+	        printf("\n Enter marks of candidate in EEEE in continous evaluation exam==>");
+	        scanf("%d",&cteeeee);
+	        printf("\n Enter marks of candidate in EEEE in viva vace exam==>");
+	        scanf("%d",&vveeee);
+	        lpweeee=cteeeee+vveeee;
+	        printf("\n Enter marks of candidate in EEEE in end semester exam==>");
+	        scanf("%d",&seeeeee);
+	        tmeeee=0.4*ceeeee+0.2*lpweeee+0.4*seeeeee;
+	        
+            
+            a[i][3]=tmeeee;
+            
+            
+	        printf("\n Enter marks of candidate in LA in class test==>");
+	        scanf("%d",&ctla);
+	        printf("\n Enter marks of candidate in LA in sessional exam==>");
+	        scanf("%d",&sela);
+	        printf("\n Enter marks of candidate in LA in assignment exam==>");
+	        scanf("%d",&aela);
+	        cela=(ctla+sela+aela);
+	        printf("\n Enter marks of candidate in LA in end semester exam==>");
+	        scanf("%d",&seela);
+	        tmla=0.6*cela+0.4*seela;
+	        
+            a[i][4]=tmla;
+		
+		}
+	}
+	
+	printf("\nRl  \tCP    \tp    \tE4     \tLA \n");
+
+	for(i=0;i<N;i++)
+	{
+		for(j=0;j<M;j++)
+		{
+			
+			printf("%d     |",a[i][j]);
+			
+		}
+			
+	printf("\n");
+	printf("\n___________________________________________\n");
+	}
+	for (i=0;i<N;i++)
+	{
+		if(a[i][1]>=91 && a[i][1]<=100)
+		{
+			strcpy(sa,"A+");
+		}
+		else if(a[i][1]>=81 && a[i][1]<=90)
+		{
+			strcpy(sa,"A");
+		}
+		else if(a[i][1]>=71 && a[i][1] <=80)
+		{
+			strcpy(sa,"B+");
+		}
+		else if(a[i][1]>=61 && a[i][1]<=70)
+		{
+			strcpy(sa,"B");
+		}
+		else if(a[i][1]>=51 && a[i][1]<=60)
+		{
+			strcpy(sa,"C+");
+		}
+		else if(a[i][1]>=41 && a[i][1]<=50)
+		{
+			strcpy(sa,"C");
+		}
+		else if(a[i][1]>=35 && a[i][1]<=40)
+		{
+			strcpy(sa,"D+");
+		}
+		else
+		{
+			strcpy(sa,"Fail");
+		}
+		if(a[i][2]>=91 &&a[i][2]<=100)
+		{
+			strcpy(sb,"A+");
+		}
+		else if(a[i][2]>=81&& a[i][2]<=90)
+		{
+			strcpy(sb,"A");
+		}
+		else if(a[i][2]>=71&& a[i][2]<=80)
+		{
+			strcpy(sb,"B+");
+		}
+		else if(a[i][2]>=61&& a[i][2]<=70)
+		{
+			strcpy(sb,"B");
+		}
+		else if(a[i][2]>=51&& a[i][2]<=60)
+		{
+			strcpy(sb,"C+");
+		}
+		else if(a[i][2]>=41&& a[i][2]<=50)
+		{
+			strcpy(sb,"C");
+		}
+		else if(a[i][2]>=35&& a[i][2]<=40)
+		{
+			strcpy(sb,"D+");
+		}
+		else
+		{
+			strcpy(sb,"Fail");
+		}
+		if(a[i][3]>=91&&a[i][3]<=100)
+		{
+			strcpy(sc,"A+");
+		}
+		else if(a[i][3]>=81&& a[i][3]<=90)
+		{
+			strcpy(sc,"A");
+		}
+		else if(a[i][3]>=71&& a[i][3]<=80)
+		{
+			strcpy(sc,"B+");
+		}
+		else if(a[i][3]>=61&& a[i][3]<=70)
+		{
+			strcpy(sc,"B");
+		}
+		else if(a[i][3]>=51&& a[i][3]<=60)
+		{
+			strcpy(sc,"C+");
+		}
+		else if(a[i][3]>=41&& a[i][3]<=50)
+		{
+			strcpy(sc,"C");
+		}
+		else if(a[i][3]>=35&& a[i][3]<=40)
+		{
+			strcpy(sc,"D+");
+		}
+		else
+		{
+			strcpy(sc,"Fail");
+		}
+		
+		if(a[i][4]>=91&& a[i][4]<=100)
+		{
+			strcpy(sd,"A+");
+		}
+		else if(a[i][4]>=81&& a[i][4]<=90)
+		{
+			strcpy(sd,"A");
+		}
+		else if(a[i][4]>=71&& a[i][4]<=80)
+		{
+			strcpy(sd,"B+");
+		}
+		else if(a[i][4]>=61&&a[i][4]<=70)
+		{
+			strcpy(sd,"B");
+		}
+		else if(a[i][4]>=51&& a[i][4]<=60)
+		{
+			strcpy(sd,"C+");
+		}
+		else if(a[i][4]>=41&& a[i][4]<=50)
+		{
+			strcpy(sd,"C");
+		}
+		else if(a[i][4]>=35&& a[i][4]<=40)
+		{
+			strcpy(sd,"D+");
+		}
+		else
+		{
+			strcpy(sd,"Fail");
+		}
+		
+		
+		printf("\n %d    | %s    | %s    | %s   | %s     | ",a[i][0],sa,sb,sc,sd,se);
+		printf("\n____________________________________________");
+	}
+	printf("\n____________________________________________\n");
+	
+	
+	
+	
+	printf("\n Enter 1 for average marks in CP\n Enter 2 for average marks in Physics\n Enter 3 for average marks in EEEE\n Enter 4 for average marks in Linear algebra\n Enter 5 to exit");
+	do{
+	
+	printf("\n Enter choice==>");
+	scanf("%d",&c);
+	if(c==1)
+	{
+	
+	for(i=0;i<N;i++)
+    {
+    	cp=cp+a[i][1];
+	}
+    avgcp=cp/N;
+	printf("\n%d is average marks in CP",avgcp);
+    }
+    else if(c==2)
+    {
+	
+	for(i=0;i<N;i++)
+    {
+    	p=p+a[i][2];
+	}
+    avgp=p/N;
+	printf("\n%d is average marks in Physics",avgp);
+    }
+    else if(c==3)
+    {
+	
+	for(i=0;i<N;i++)
+    {
+    	eeee=eeee+a[i][3];
+	}
+    avgeeee=eeee/N;
+	printf("\n%d is average marks in EEEE",avgeeee);
+	}
+	else if(c==4)
+	{
+	for(i=0;i<N;i++)
+    {
+    	la=la+a[i][4];
+	}
+    avgla=la/N;
+	printf("\n%d is average marks in Linear algebra",avgla);
+    }
+    else if(c==5)
+    {
+    	break;
+	}
+    else
+    {
+    	printf("\n Invalid choice");
+	}
+    }
+    while(c!=5);
+    
+    printf("\n Enter 1 to get highest marks in CP\n Enter 2 to get highest marks in Physics\n Enter 3 to get highest marks in EEEE\n Enter 4 to get highest marks in Linear algebra\n Enter 5 to get Lowest marks in CP\n Enter 6 to get Lowest marks in Physics\n Enter 7 to get Lowest marks in EEEE\n Enter 8 to get Lowest marks in Linear algebra\n Enter 9 to Exit");
+    do
+    {
+    	
+		printf("\n Enter  option==>");
+    	scanf("%d",&ch);
+	if(ch==1)
+	{
+	
+	maxcp=a[0][1];
+	for(i=0;i<N;i++)
+	{
+		if(maxcp<a[i][1])
+		{
+			maxcp=a[i][1];
+		}
+	}
+	printf("\n Highest marks in CP is=%d",maxcp);
+    }
+    else if(ch==2)
+    {
+	
+	maxp=a[0][1];
+	for(i=0;i<N;i++)
+	{
+		if(maxp<a[i][2])
+		{
+			maxp=a[i][2];
+		}
+	}
+	printf("\n Highest marks in Physics is=%d",maxp);
+    }
+    else if(ch==3)
+    {
+	
+		maxeeee=a[0][1];
+	for(i=0;i<N;i++)
+	{
+		if(maxeeee<a[i][3])
+		{
+			maxeeee=a[i][3];
+		}
+	}
+	printf("\n Highest marks in EEEE is=%d",maxeeee);
+    }
+    else if(ch==4)
+    {
+	
+		maxla=a[0][1];
+	for(i=0;i<N;i++)
+	{
+		if(maxla<a[i][4])
+		{
+			maxla=a[i][4];
+		}
+	}
+	printf("\n Highest marks in linear algebra is=%d",maxla);
+    }
+    else if(ch==5)
+    {
+	
+	mincp=a[0][1];
+	for(i=0;i<N;i++)
+	{
+		if(mincp>a[i][1])
+		{
+			mincp=a[i][1];
+		}
+	}
+	printf("\n Lowest marks in CP is=%d",mincp);
+    }
+    else if(ch==6)
+    {
+	
+	minp=a[0][1];
+	for(i=0;i<N;i++)
+	{
+		if(minp>a[i][2])
+		{
+			minp=a[i][2];
+		}
+	}
+	printf("\n Lowest marks in Physics is=%d",minp);
+    }
+    else if(ch==7)
+    {
+	
+		mineeee=a[0][1];
+	for(i=0;i<N;i++)
+	{
+		if(mineeee>a[i][3])
+		{
+			mineeee=a[i][3];
+		}
+	}
+	printf("\n Lowest marks in EEEE is=%d",mineeee);
+    }
+    else if(ch==8)
+    {
+	
+		minla=a[0][1];
+	for(i=0;i<N;i++)
+	{
+		if(minla>a[i][4])
+		{
+			minla=a[i][4];
+		}
+	}
+	printf("\n Lowest marks in linear algebra is=%d",minla);
+    }
+    else if(ch==9)
+    {
+    	break;
+	}
+	else
+	{
+		printf("\n Invalid choice");
+	}
+	}
+	while(ch!=9);
+}
+
+else if(choice==2)
+{
+	printf("\n SOFTWARE DEVELOPERS- JUGAL UPADHYAY(20TEC103) & VEDANT PATEL(20TEC077)");
+}
+else if(choice==3)
+{
+	printf("\n Contact details-- 20tec103@gmail.com, 20tec077@gmail.com");
+}
+else if(choice==4)
+{
+	break;
+}
+else
+{
+	printf("\n Invalid choice");
+}
+}
+   while(ch!=4);
+   
+    printf("\nEnter how many records you want to add=>");
+	scanf("%d",&x);
+	
+	fp=fopen("data.txt","w");
+	
+	for(i=0;i<x;i++)
+	{
+		printf("\nEnter no=>");
+		scanf("%d",&rollno);
+		printf("\nEnter name=>");
+		scanf("%s",name);
+		printf("\nEnter total marks in CP=>");
+		scanf("%d",&tcp);
+		printf("\nEnter total marks in Physics=>");
+		scanf("%d",&tp);
+		printf("\nEnter total marks in EEEE=>");
+		scanf("%d",&teeee);
+		printf("\nEnter total marks in Linear algebra=>");
+		scanf("%d",&tla);
+		
+		fprintf(fp,"%d %s %d %d %d %d \n",rollno,name,tcp,tp,teeee,tla);
+	}
+	fclose(fp);
+	
+	fp=fopen("data.txt","r");
+	
+	printf("\nRecords");
+	
+	for(i=0;i<x;i++)
+	{
+		fscanf(fp,"%d %s %d %d %d %d",&rollno,name,&tcp,&tp,&teeee,&tla);
+		printf("\n%d\t%s\t%d\t%d\t%d\t%d",rollno,name,tcp,tp,teeee,tla);
+	}
+	fclose(fp);
+   
+   	printf("\n\n\n\n\n\ This project belongs to 20TEC103 and 20TEC077");
+	
+	printf("\n\n\n\n\nRemember that what's right isn't always popular and what's popular isn't always right.\nEverybody makes mistakes; that's why they put erasers on pencils");
+	
+	printf("\n THANK YOU");
+	
+}
