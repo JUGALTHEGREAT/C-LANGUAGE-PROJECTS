@@ -1,0 +1,65 @@
+#include<stdio.h>
+#define N 3
+#define M 3
+#define L 3
+main()
+{
+	int a[N][N];
+	int b[N][N];
+	int c[L][L];
+	int i,j;
+	
+	for(i=0;i<N;i++)
+	{
+		for(j=0;j<N;j++)
+		{
+			printf("\n Enter values==>");
+			scanf("%d",&a[i][j]);
+		}
+	}
+	for(i=0;i<N;i++)
+	{
+		for(j=0;j<N;j++)
+		{
+			printf("%d  |",a[i][j]);
+			
+		}
+		
+	printf("\n");
+	
+	}
+	
+	for(i=0;i<M;i++)
+	{
+		for(j=0;j<M;j++)
+		{
+			printf("\n Enter values==>");
+			scanf("%d",&b[i][j]);
+		}
+	}
+	for(i=0;i<M;i++)
+	{
+		for(j=0;j<M;j++)
+		{
+			printf("%d  |",b[i][j]);
+			
+		}
+		
+	printf("\n");
+	
+	}
+	
+	printf("\n\nAddition\n");
+	for(i=0;i<L;i++)
+	{
+		for(j=0;j<L;j++)
+		{
+			printf("%d  |",(a[i][j])+(b[i][j]));
+			
+		}
+		
+	printf("\n");
+	
+	}
+
+}
